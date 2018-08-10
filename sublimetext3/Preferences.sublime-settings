@@ -1,0 +1,21 @@
+{
+	"color_scheme": "Packages/Agila Theme/Agila Dracula.tmTheme",
+	"font_face": "Fantasque Sans Mono",
+	"font_size": 12,
+	"ignored_packages":
+	[
+		"Vintage"
+	],
+	"tab_size": 2,
+	"theme": "Agila Dracula.sublime-theme",
+	"theme_agila_compact_sidebar": true,
+	"theme_agila_compact_tab": true,
+	"theme_agila_horizontal_scrollbar_pink": true,
+	"theme_agila_modified_tab_marker_pink": true,
+	"theme_agila_sidebar_font_xsmall": true,
+	"theme_agila_sidebar_light_icons": true,
+	"theme_agila_sidebar_mini": true,
+	"theme_agila_sidebar_selected_entry_pink": true,
+	"theme_agila_vertical_scrollbar_pink": true,
+	"translate_tabs_to_spaces": true
+}

@@ -1,0 +1,8 @@
+[user]
+	name = snsvrno
+	email = snsvrno@tuta.io
+	mail = snsvrno@tuta.io
+	signingKey = 99AADA817092760B
+[commit]
+	gpgsign = true
+  template = ~/.gitmessage

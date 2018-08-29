@@ -2,8 +2,14 @@
 git/gitconfig ~/.gitconfig
 git/gitmessage ~/.gitmessage
 
+# cargo stuff
+cargo/config-linux.toml ~/.cargo/config.toml
+
+# fish
+fish/functions/ ~/.config/fish/functions/
+
 # sublime3
-sublimetext3/Package\ Control.sublime-settings ~/.config/sublime-text-3/Packages/User/Package\ Control.sublime-settings
-sublimetext3/Preferences.sublime-settings ~/.config/sublime-text-3/Packages/User/Preferences.sublime-settings
-sublimetext3/Rust.sublime-settings ~/.config/sublime-text-3/Packages/User/Rust.sublime-settings
-sublimetext3/RustEnhanced.sublime-settings ~/.config/sublime-text-3/Packages/User/RustEnhanced.sublime-settings
+# sublimetext3/Package\ Control.sublime-settings ~/.config/sublime-text-3/Packages/User/Package\ Control.sublime-settings
+# sublimetext3/Preferences.sublime-settings ~/.config/sublime-text-3/Packages/User/Preferences.sublime-settings
+# sublimetext3/Rust.sublime-settings ~/.config/sublime-text-3/Packages/User/Rust.sublime-settings
+# sublimetext3/RustEnhanced.sublime-settings ~/.config/sublime-text-3/Packages/User/RustEnhanced.sublime-settings

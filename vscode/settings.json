@@ -4,4 +4,6 @@
 
     "editor.fontFamily": "'Fantasque Sans Mono'",
     "editor.fontLigatures": true,
+
+    "telemetry.enableTelemetry": false,
 }

@@ -1,9 +1,13 @@
 {
-    "workbench.colorTheme": "Dobri Next -C03- Cupcake",
+    "workbench.colorTheme": "Dobri Next -A10- Adapta Nokto",
     "workbench.iconTheme": "file-icons",
 
     "editor.fontFamily": "'Fantasque Sans Mono'",
     "editor.fontLigatures": true,
 
     "telemetry.enableTelemetry": false,
+
+    "rust.features": [
+        "backend-vulkan"
+    ]
 }

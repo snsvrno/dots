@@ -1,4 +1,5 @@
 function fish_greeting
-	echo "hi"
+	fortune
+	echo ""
 end
 

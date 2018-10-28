@@ -1,11 +1,5 @@
-feat (feature)
-fix (bug fix)
-docs (documentation)
-style (formatting, missing semi colons, …)
-refactor
-test (when adding missing tests)
-chore (maintain)
+# -= message format guide =-
 
-<message>
-
-<footer> BREAKING CHANGE:
+# 1: feat,fix,docs,style,refactor,test,chore
+# 2: <message>
+# 3: (optional) BREAKING CHANGE: <description of change>

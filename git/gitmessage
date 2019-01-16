@@ -1,5 +1,4 @@
-# -= message format guide =-
-
+### message format guide
 # 1: feat,fix,docs,style,refactor,test,chore
 # 2: <message>
 # 3: (optional) BREAKING CHANGE: <description of change>

@@ -1,2 +1,2 @@
 require('nvim-tree').setup ()
-vim.cmd[[nmap <F2> :NvimTreeToggle<CR>]]
+vim.cmd[[nmap <F4> :NvimTreeToggle<CR>]]

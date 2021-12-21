@@ -1,1 +1,5 @@
+# locally set variables.
 fish/fish_variables
+
+# the local (per pc) settings.
+nvim/config/local.lua

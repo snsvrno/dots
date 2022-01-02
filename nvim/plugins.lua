@@ -1,23 +1,21 @@
-local packer = require("packer")
-
-local function startup()
+return function(use)
 
 	use { 'nvim-lualine/lualine.nvim', requires = {'kyazdani42/nvim-web-devicons', opt = true} }
 
 	use 'sheerun/vim-polyglot'
---	use 'jdonaldson/vaxe'
+	use 'jdonaldson/vaxe'
 
--- THEMES
+	-------------------------------------
+	-- THEMES ---------------------------
 	use 'folke/tokyonight.nvim'
---	use 'projekt0n/github-nvim-thme'
---	use 'https://git.sr.ht/~novakane/kosmikoa/nvim'
 	use 'rafamadriz/neon'
 	use 'catppuccin/nvim'
---	use 'glepnir/zephyr-nvim'
 	use 'sainnhe/sonokai'
 	use 'Mofiqul/dracula.nvim'
+	use 'floke/tokyonight.nvim'
 
 	use 'airblade/vim-gitgutter'
+
 -- 	use { 'romgrk/barbar.nvim', requires = 'kyazdani42/nvim-web-devicons' }
 	
 	use { 'kyazdani42/nvim-tree.lua', 
@@ -43,15 +41,9 @@ local function startup()
 	use 'junegunn/fzf'
 	use 'junegunn/fzf.vim'
 
-	use 'numToSTr/FTerm.nvim'
-
-
 -- language stuff
 --	use 'neovim/nvim-lspconfig'
 	use { 'neoclide/coc.nvim', branch = "release" }
 
-	use 'majutsushi/tagbar'
-
+	if packer_bootstrap then require('packer').sync() end
 end
-
-return packer.startup(startup)

@@ -1,1 +1,1 @@
-vmd.command('<F7> :TroubleToggle<CR>:')
+vim.cmd [[nmap <F7> :TroubleToggle<CR>]]

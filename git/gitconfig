@@ -3,11 +3,16 @@
 	email = snsvrno@tuta.io
 	mail = snsvrno@tuta.io
 	signingKey = 99AADA817092760B
+
 [commit]
 	gpgsign = true
-    template = ~/.gitmessage
+	template = ~/.gitmessage
+
 [core]
-	editor = vim
-	hooksPath = /home/snsvrno/projects/misc/dots/git/hooks/
+	editor = nvim
+
 [gpg]
 	program = gpg
+
+[init]
+	defaultBranch = main

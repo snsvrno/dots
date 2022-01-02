@@ -20,7 +20,7 @@ require 'config.neovide'
 require 'config.plugins.packer'
 
 -- the main theme.
-require 'config.themes.tokyonight'
+require 'config.themes.nightfox'
 
 -- interface stuff
 require 'config.plugins.lualine'

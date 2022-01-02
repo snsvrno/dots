@@ -13,6 +13,8 @@ return function(use)
 	use 'sainnhe/sonokai'
 	use 'Mofiqul/dracula.nvim'
 	use 'floke/tokyonight.nvim'
+	use 'EdenEast/nightfox.nvim'
+
 
 	use 'airblade/vim-gitgutter'
 

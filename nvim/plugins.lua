@@ -1,12 +1,9 @@
 return function(use)
 
-	use { 'nvim-lualine/lualine.nvim', requires = {'kyazdani42/nvim-web-devicons', opt = true} }
-
-	use 'sheerun/vim-polyglot'
-	use 'jdonaldson/vaxe'
-
 	-------------------------------------
 	-- THEMES ---------------------------
+	-------------------------------------
+
 	use 'folke/tokyonight.nvim'
 	use 'rafamadriz/neon'
 	use 'catppuccin/nvim'
@@ -15,21 +12,28 @@ return function(use)
 	use 'floke/tokyonight.nvim'
 	use 'EdenEast/nightfox.nvim'
 
+	------------------------------------
+	-- UI COMPONENTS -------------------
+	------------------------------------
 
+	-- git gutter symbols
 	use 'airblade/vim-gitgutter'
 
--- 	use { 'romgrk/barbar.nvim', requires = 'kyazdani42/nvim-web-devicons' }
-	
-	use { 'kyazdani42/nvim-tree.lua', 
+	-- the bar at the bottom
+	use { 'nvim-lualine/lualine.nvim',
+		requires = {
+			'kyazdani42/nvim-web-devicons',
+			opt = true
+		}
+	}
+
+	-- the side bar navigation tree
+	use { 'kyazdani42/nvim-tree.lua',
 		requires = 'kyazdani42/nvim-web-devicons', 
 		config = function() require('nvim-tree').setup { } end 
 	}
 
-	use {
-		'nvim-treesitter/nvim-treesitter',
-		run = ':TSUpdate'
-	}
-
+	-- for the trouble split, that shows all problems in the file
 	use { "folke/trouble.nvim",
 		requires = "kyazdani42/nvim-web-devicons",
 		config = function()
@@ -40,12 +44,27 @@ return function(use)
 			}
   	end
 	}
+
+	------------------------------------------
+	-- OTHER STUFF ---------------------------
+	------------------------------------------
+
+	-- for better highlighting.
+	use { 'nvim-treesitter/nvim-treesitter',
+		run = ':TSUpdate'
+	}
+
+	-- fuzzy finder.
 	use 'junegunn/fzf'
 	use 'junegunn/fzf.vim'
 
 -- language stuff
---	use 'neovim/nvim-lspconfig'
 	use { 'neoclide/coc.nvim', branch = "release" }
 
+	use 'sheerun/vim-polyglot'
+	use 'jdonaldson/vaxe'
+
+	-- will run an install request if this was the first time
+	-- packer was run.
 	if packer_bootstrap then require('packer').sync() end
 end

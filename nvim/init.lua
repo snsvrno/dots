@@ -1,11 +1,3 @@
--- a way for me to set things in certain
--- themes / plugins and have them accessible
--- elsewhere.
---
--- specifically for setting a theme and then
--- setting that in other places that can use it
-config_interchange = { }
-
 -- neovim settings, nothing plugin related.
 require 'config.basic'
 

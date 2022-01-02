@@ -1,5 +1,15 @@
 #!/bin/sh
 
+function exists() {
+	APP=$1
+	if [[ ! -x "$(command -v $APP)" ]]; then
+		echo $APP is not installed, skipping ...
+		return 1;
+	else
+		return 0;
+	fi
+}
+
 # link [SOURCE FILE] [DESTINATION FILE]
 #
 # hard links the 2 files.

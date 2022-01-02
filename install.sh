@@ -1,33 +1,44 @@
 #!/bin/sh
+
+# the helper functions that are used in this script
 source ./functions.sh
 
 ##########################################################
 ## KITTY TERMINAL ########################################
 ##########################################################
-link kitty/kitty.conf ~/.config/kitty/kitty.conf
-link kitty/theme.conf ~/.config/kitty/theme.conf
-# gitclone https://github.com/dexpota/kitty-themes.git ~/.config/kitty/themes  
+if exists kitty; then
+	link kitty/kitty.conf ~/.config/kitty/kitty.conf
+	link kitty/theme.conf ~/.config/kitty/theme.conf
+fi
 
 ##########################################################
 ## NEOVIM ################################################
 ##########################################################
-link nvim/init.lua ~/.config/nvim/init.lua
-link nvim/plugins.lua ~/.config/nvim/lua/plugins.lua
-softlink nvim/config ~/.config/nvim/lua/config
+if exists nvim; then
+	link nvim/init.lua ~/.config/nvim/init.lua
+	link nvim/plugins.lua ~/.config/nvim/lua/plugins.lua
+	softlink nvim/config ~/.config/nvim/lua/config
+fi
 
 ##########################################################
 ## GIT ###################################################
 ##########################################################
-link git/gitconfig ~/.gitconfig
-link git/gitmessage ~/.gitmessage
+if exists git; then
+	link git/gitconfig ~/.gitconfig
+	link git/gitmessage ~/.gitmessage
+fi
 
 #########################################################
 ## FISH #################################################
 #########################################################
-link fish/config.fish ~/.config/fish/config.fish
-softlink fish/functions ~/.config/fish/user_functions
+if exists fish; then
+	link fish/config.fish ~/.config/fish/config.fish
+	softlink fish/functions ~/.config/fish/user_functions
+fi
 
 #########################################################
 ## i3 ###################################################
 #########################################################
-link i3/config ~/.config/i3/config
+if exists i3; then
+	link i3/config ~/.config/i3/config
+fi

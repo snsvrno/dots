@@ -4,12 +4,8 @@ return function(use)
 	-- THEMES ---------------------------
 	-------------------------------------
 
-	use 'folke/tokyonight.nvim'
-	use 'rafamadriz/neon'
-	use 'catppuccin/nvim'
 	use 'sainnhe/sonokai'
 	use 'Mofiqul/dracula.nvim'
-	use 'floke/tokyonight.nvim'
 	use 'EdenEast/nightfox.nvim'
 
 	------------------------------------

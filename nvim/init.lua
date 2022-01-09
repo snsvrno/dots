@@ -12,7 +12,7 @@ require 'config.neovide'
 require 'config.plugins.packer'
 
 -- the main theme.
-require 'config.themes.nightfox'
+require 'config.themes.palenight'
 
 -- interface stuff
 require 'config.plugins.lualine'
@@ -23,4 +23,8 @@ require 'config.plugins.gitgutter'
 require 'config.plugins.treesitter'
 require 'config.plugins.trouble'
 require 'config.plugins.coc'
-require 'config.plugins.fzf'
+-- require 'config.plugins.fzf'
+require 'config.plugins.neuron'
+require 'config.plugins.plenary'
+require 'config.plugins.popup'
+require 'config.plugins.telescope'

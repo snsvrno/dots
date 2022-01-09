@@ -7,6 +7,10 @@ return function(use)
 	use 'sainnhe/sonokai'
 	use 'Mofiqul/dracula.nvim'
 	use 'EdenEast/nightfox.nvim'
+	use 'rebelot/kanagawa.nvim'
+	use { 'catppuccin/nvim', as = "catppuccin" }
+	use 'katawful/kat.vim'
+	use 'drewtempelmeyer/palenight.vim'
 
 	------------------------------------
 	-- UI COMPONENTS -------------------
@@ -45,14 +49,23 @@ return function(use)
 	-- OTHER STUFF ---------------------------
 	------------------------------------------
 
+	use "oberblastmeister/neuron.nvim"
+	use 'nvim-lua/popup.nvim'
+	use "nvim-lua/plenary.nvim"
+	use "nvim-telescope/telescope.nvim"
+
+	-- so i can get a matching kitty config if there
+	-- isn't one made already.
+	use 'psliwka/termcolors.nvim'
+
 	-- for better highlighting.
 	use { 'nvim-treesitter/nvim-treesitter',
 		run = ':TSUpdate'
 	}
 
 	-- fuzzy finder.
-	use 'junegunn/fzf'
-	use 'junegunn/fzf.vim'
+	-- use 'junegunn/fzf'
+	-- use 'junegunn/fzf.vim'
 
 -- language stuff
 	use { 'neoclide/coc.nvim', branch = "release" }

@@ -10,3 +10,4 @@ set -x GPG_TTY (tty)
 
 # for using direnv
 direnv hook fish | source
+starship init fish | source

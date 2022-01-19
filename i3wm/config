@@ -11,24 +11,31 @@
 
 set $mod Mod4
 
+include local # settings specific to this computer
+include startup # apps to run at startup.
+
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
-font pango:Iosevka Nerd Font 10
+# font pango:Iosevka Nerd Font 10
+
+# This font is widely installed, provides lots of unicode glyphs, right-to-left
+# text rendering and scalability on retina/hidpi displays (thanks to pango).
+#font pango:DejaVu Sans Mono 8
 
 # Start XDG autostart .desktop files using dex. See also
 # https://wiki.archlinux.org/index.php/XDG_Autostart
-exec --no-startup-id dex --autostart --environment i3
+# exec --no-startup-id dex --autostart --environment i3
 
 # The combination of xss-lock, nm-applet and pactl is a popular choice, so
 # they are included here as an example. Modify as you see fit.
 
 # xss-lock grabs a logind suspend inhibit lock and will use i3lock to lock the
 # screen before suspend. Use loginctl lock-session to lock your screen.
-exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
+# exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
 
 # NetworkManager is the most popular way to manage wireless networks on Linux,
 # and nm-applet is a desktop environment-independent system tray GUI for it.
-exec --no-startup-id nm-applet
+# exec --no-startup-id nm-applet
 
 # Use pactl to adjust volume in PulseAudio.
 set $refresh_i3status killall -SIGUSR1 i3status
@@ -47,7 +54,7 @@ bindsym $mod+Return exec i3-sensible-terminal
 bindsym $mod+Shift+q kill
 
 # start dmenu (a program launcher)
-# bindsym $mod+d exec --no-startup-id dmenu_run
+bindsym $mod+d exec --no-startup-id dmenu_run
 # A more modern dmenu replacement is rofi:
 # bindcode $mod+40 exec "rofi -modi drun,run -show drun"
 # There also is i3-dmenu-desktop which only displays applications shipping a
@@ -175,35 +182,16 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 
+###############################################################################
+## i3-gaps specific settings
+
+gaps inner 10
+gaps outer 10
+hide_edge_borders both
+default_border pixel 0
+
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
-#EEbar {
+#bar {
 #        status_command i3status
 #}
-
-
-# class                 border  bground text    indicator child_border
-client.focused          #35334F #35334F #E0DEF4 #35334F   #35334F
-client.focused_inactive #817C9C #232136 #817C9C #484E50   #5F676A
-client.unfocused        #333333 #232136 #35334F #292D2E   #222222
-client.urgent           #2F343A #EB6F92 #FFFFFF #EB6F92   #900000
-client.placeholder      #000000 #232136 #FFFFFF #000000   #0C0C0C
-
-client.background       #FFFFFF
-
-bar {
-  status_command i3status
-  colors {
-    background #232136
-    statusline #FFFFFF
-    separator  #666666
-
-    focused_workspace  #35334F #35334F #E0DEF4
-    active_workspace   #232136 #232136 #FFFFFF
-    inactive_workspace #232136 #232136 #888888
-    urgent_workspace   #232136 #F6C177 #35334F
-    binding_mode       #232136 #EB6F92 #35334F
-  }
-}
-
-bindsym $mod+d exec "dmenu_run -nf '#E0DEF4' -nb '#232136' -sb '#35334F' -sf '#E0DEF4' -fn 'monospace-10' -p 'dmenu prompt &gt;'"

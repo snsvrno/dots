@@ -4,3 +4,4 @@ fish/fish_variables
 # the local (per pc) settings.
 nvim/config/local.lua
 kitty/local.conf
+i3wm/local

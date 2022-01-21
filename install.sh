@@ -51,6 +51,16 @@ if exists kitty; then
 fi
 
 ##########################################################
+## STARSHIP ##############################################
+##########################################################
+if exists starship; then
+	mkdir ~/.config/starship
+	touch starship/local.toml
+	link starship/config.toml ~/.config/starship.toml
+	link starship/local.toml ~/.config/starship/local.toml
+fi
+
+##########################################################
 ## NEOVIM ################################################
 ##########################################################
 if exists nvim; then

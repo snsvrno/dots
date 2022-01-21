@@ -1,0 +1,9 @@
+add_newline = false
+format = """
+[](fg:green)\
+[$directory](bg:green)\
+[](fg:green) 
+"""
+
+[directory]
+style = "fg:black bg:green"

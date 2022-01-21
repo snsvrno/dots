@@ -11,6 +11,7 @@ return function(use)
 	use { 'catppuccin/nvim', as = "catppuccin" }
 	use 'katawful/kat.vim'
 	use 'drewtempelmeyer/palenight.vim'
+	use 'savq/melange'
 
 	------------------------------------
 	-- UI COMPONENTS -------------------

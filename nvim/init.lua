@@ -12,7 +12,7 @@ require 'config.neovide'
 require 'config.plugins.packer'
 
 -- the main theme.
-require 'config.themes.palenight'
+require 'config.themes.kanagawa'
 
 -- interface stuff
 require 'config.plugins.lualine'

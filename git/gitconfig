@@ -10,6 +10,7 @@
 
 [core]
 	editor = nvim
+	hooksPath = ~/.git/hooks/
 
 [gpg]
 	program = gpg

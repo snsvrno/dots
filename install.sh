@@ -24,8 +24,10 @@ fi
 ## GIT ###################################################
 ##########################################################
 if exists git; then
+	mkdir -p ~/.git
 	link git/gitconfig ~/.gitconfig
 	link git/gitmessage ~/.gitmessage
+	softlink git/hooks ~/.git/hooks
 fi
 
 #########################################################
@@ -54,7 +56,7 @@ fi
 ## STARSHIP ##############################################
 ##########################################################
 if exists starship; then
-	mkdir ~/.config/starship
+	mkdir -p ~/.config/starship
 	touch starship/local.toml
 	link starship/config.toml ~/.config/starship.toml
 	link starship/local.toml ~/.config/starship/local.toml

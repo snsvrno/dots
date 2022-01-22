@@ -1,9 +1,14 @@
 add_newline = false
 format = """
-[](fg:green)\
-[$directory](bg:green)\
-[](fg:green) 
+$directory\
 """
 
 [directory]
+format ="""
+[](fg:green)\
+[$path]($style)\
+[$read_only]($read_only_style)\
+[](fg:green)\
+[ ](none)\
+"""
 style = "fg:black bg:green"

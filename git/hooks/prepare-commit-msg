@@ -2,6 +2,6 @@
 hookPath=$(git config core.hooksPath)
 
 # get all the angular style commits, and add them to the commit
-output=$($hookPath/angular-commit-msg)
+# output=$($hookPath/angular-commit-msg)
 
-echo "$output" >> "$1"
+# echo "$output" >> "$1"

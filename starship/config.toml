@@ -1,6 +1,7 @@
 add_newline = true
 
 format = """
+${custom.timew}\
 $directory\
 ${custom.direnv}\
 ${git_branch}\
@@ -80,3 +81,15 @@ format = """
 """
 command = "hl --version"
 when = "which hl"
+
+[custom.timew]
+format = """
+[](fg:bright-green)\
+[ $output](fg:black bg:bright-green)\
+[](fg:bright-green)\
+[ ](none)\
+"""
+command = "timew | grep Total | sed -e \"s/Total\\ *//\""
+when = "timew | grep Started"
+
+

@@ -99,3 +99,12 @@ if exists ranger; then
 	link ranger/rc.conf ~/.config/ranger/rc.conf
 	link ranger/rifle.conf ~/.config/ranger/rifle.conf
 fi
+
+#########################################################
+## rofi #################################################
+#########################################################
+if exists rofi; then
+	mkdir -p ~/.config/rofi
+	link rofi/config.rasi ~/.config/rofi/config.rasi
+	link rofi/theme.rasi ~/.config/rofi/theme.rasi
+fi

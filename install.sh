@@ -38,6 +38,7 @@ if exists i3; then
 	touch i3wm/local
 	link i3wm/config ~/.config/i3/config
 	link i3wm/startup ~/.config/i3/startup
+	link i3wm/shortcuts ~/.config/i3/shortcuts
 	link i3wm/local ~/.config/i3/local
 fi
 

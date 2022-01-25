@@ -1,0 +1,6 @@
+# application launcher.
+bindsym $mod+d exec "rofi -modi drun,run -show drun"
+
+# terminal stuff
+bindsym $mod+Return exec "kitty"
+bindsym $mod+Shift+Return exec "kitty --config /home/snsvrno/.config/kitty/kitty-secondary.conf"

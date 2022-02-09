@@ -19,10 +19,12 @@ require 'config.plugins.lualine'
 require 'config.plugins.nvimtree'
 
 -- other plugins
+require 'config.plugins.todocomments'
+require 'config.plugins.haxe'
 require 'config.plugins.gitgutter'
 require 'config.plugins.treesitter'
 -- require 'config.plugins.trouble'
-require 'config.plugins.coc'
+-- require 'config.plugins.coc'
 -- require 'config.plugins.fzf'
 -- require 'config.plugins.neuron'
 require 'config.plugins.plenary'

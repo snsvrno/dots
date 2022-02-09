@@ -169,7 +169,7 @@ bindsym $mod+r mode "resize"
 
 gaps inner 10
 gaps outer 0
-gaps top 42
+gaps top 54
 hide_edge_borders both
 default_border pixel 0
 

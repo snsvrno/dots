@@ -50,10 +50,12 @@ return function(use)
 	-- OTHER STUFF ---------------------------
 	------------------------------------------
 
-	use "oberblastmeister/neuron.nvim"
+	use 'neovim/nvim-lspconfig'
 	use 'nvim-lua/popup.nvim'
 	use "nvim-lua/plenary.nvim"
 	use "nvim-telescope/telescope.nvim"
+	use 'ggandor/lightspeed.nvim'
+	use 'tpope/vim-repeat'
 
 	-- so i can get a matching kitty config if there
 	-- isn't one made already.
@@ -63,6 +65,8 @@ return function(use)
 	use { 'nvim-treesitter/nvim-treesitter',
 		run = ':TSUpdate'
 	}
+
+	use 'folke/todo-comments.nvim'
 
 	-- fuzzy finder.
 	-- use 'junegunn/fzf'

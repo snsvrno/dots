@@ -1,0 +1,103 @@
+[global/wm]
+margin-top = 10
+margin-bottom = 10
+
+[colors]
+background = #EE1f1f28
+background-alt = #2d4f76
+foreground = #DCD7BA
+foreground-alt = #c8c093
+primary = #76946a
+secondary = #C0A3Ge
+alert = #c34043
+
+[bar/base]
+offset-x = 12
+offset-y = 12
+height = 42
+
+background = ${colors.background}
+foreground = ${colors.foreground}
+
+[bar/left]
+inherit = bar/base
+height = 32 
+monitor = "HDMI-0"
+font-0 = "FantasqueSansMono Nerd Font:style=Regular:size=14"
+
+modules-left = i3
+modules-center = date
+
+[bar/laptop]
+inherit = bar/base
+monitor = "eDP-1"
+font-0 = "FantasqueSansMono Nerd Font:style=Regular:size=14"
+height = 42
+
+modules-left = i3
+modules-center = date
+
+[bar/right]
+inherit = bar/base
+height = 32
+monitor = "DP-3"
+font-0 = "FantasqueSansMono Nerd Font:style=Regular:size=14"
+
+modules-left = i3
+modules-center = date
+
+[bar/center]
+inherit = bar/base
+monitor = "DP-4"
+font-0 = "FantasqueSansMono Nerd Font:style=Regular:size=20"
+
+modules-left = i3
+modules-center = date
+
+[module/i3]
+type = internal/i3
+format = <label-state> <label-mode>
+index-sort = true
+wrapping-scroll = false
+
+; Only show workspaces on the same output as the bar
+pin-workspaces = true
+
+label-mode-padding = 2
+label-mode-foreground = #000
+label-mode-background = ${colors.primary}
+
+; focused = Active workspace on focused monitor
+label-focused = %index%
+label-focused-background = ${colors.background-alt}
+label-focused-underline= ${colors.primary}
+label-focused-padding = 2
+
+; unfocused = Inactive workspace on any monitor
+label-unfocused = %index%
+label-unfocused-padding = 2
+
+; visible = Active workspace on unfocused monitor
+label-visible = %index%
+label-visible-background = ${self.label-focused-background}
+label-visible-underline = ${self.label-focused-underline}
+label-visible-padding = ${self.label-focused-padding}
+
+; urgent = Workspace with urgency hint set
+label-urgent = %index%
+label-urgent-background = ${colors.alert}
+label-urgent-padding = 2
+
+; Separator in between workspaces
+; label-separator = |
+
+[module/date]
+type = internal/date
+
+interval = 1.0
+
+label = %date% %time%
+date = %Y-%m-%d%
+
+; Optional time format
+time = %H:%M

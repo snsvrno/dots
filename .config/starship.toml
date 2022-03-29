@@ -1,0 +1,106 @@
+add_newline = true
+
+format = """
+${custom.timew}\
+$directory\
+${custom.direnv}\
+${git_branch}\
+${git_status}\
+\
+${custom.haxe}\
+${custom.hl}\
+\
+${custom.nwjs}\
+\
+${golang}\
+[ ](none)
+$character
+"""
+
+[directory]
+format ="""
+[](fg:blue)\
+[ $path]($style)\
+[$read_only]($read_only_style)\
+[](fg:blue)\
+[ ](none)\
+"""
+style = "fg:black bg:blue"
+read_only_style = "fg:red bg:blue"
+
+[git_status]
+format ="""
+[](fg:green)\
+[ $all_status$ahead_behind]($style)\
+[](fg:green)\
+[ ](none)\
+"""
+style = "fg:black bg:green"
+
+[git_branch]
+format ="""
+[](fg:purple)\
+[$symbol$branch]($style)\
+[](fg:purple)\
+[ ](none)\
+"""
+style = "fg:black bg:purple"
+
+[golang]
+format ="""
+[](fg:yellow)\
+[ $version]($style)\
+[](fg:yellow)\
+[ ](none)\
+"""
+style = "fg:black bg:yellow"
+
+[custom.direnv]
+# files = [".envrc"]
+when = "direnv status | grep 'Loaded RC path'"
+format = """
+[](fg:bright-cyan)\
+[ direnv](fg:black bg:bright-cyan)\
+[](fg:bright-cyan)\
+[ ](none)\
+"""
+[custom.haxe]
+format = """
+[](fg:bright-yellow)\
+[hx $output](fg:black bg:bright-yellow)\
+[](fg:bright-yellow)\
+[ ](none)\
+"""
+command = "haxe --version"
+when = "which haxe"
+
+[custom.hl]
+format = """
+[](fg:bright-purple)\
+[hl $output](fg:black bg:bright-purple)\
+[](fg:bright-purple)\
+[ ](none)\
+"""
+command = "hl --version"
+when = "which hl"
+
+[custom.timew]
+format = """
+[](fg:bright-green)\
+[ $output](fg:black bg:bright-green)\
+[](fg:bright-green)\
+[ ](none)\
+"""
+command = "timew | grep Total | sed -e \"s/Total\\ *//\""
+when = "timew | grep Started"
+
+[custom.nwjs]
+format = """
+[](fg:yellow)\
+[$output](fg:black bg:yellow)\
+[](fg:yellow)\
+[ ](none)\
+"""
+command = "nw --version"
+when = "which nw"
+

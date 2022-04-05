@@ -1,10 +1,8 @@
-return function (use)
-	use {
-		"windwp/windline.nvim",
+return function (use) use {
+	"windwp/windline.nvim",
 
-		config = function()
-			-- require('wlsample.bubble')
-			require ('wlsample.airline')
-		end,
-	}
-end
+	config = function()
+		require ('wlsample.airline')
+	end,
+
+} end

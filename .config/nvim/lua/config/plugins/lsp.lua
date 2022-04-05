@@ -1,24 +1,23 @@
-return function(use)
-	use {
-		"neovim/nvim-lspconfig",
+return function(use) use {
 
-		requires = {
-			"hrsh7th/cmp-nvim-lsp"
-		},
+	"neovim/nvim-lspconfig",
 
-		config = function()
+	requires = {
+		"hrsh7th/cmp-nvim-lsp"
+	},
 
-			-- Add additional capabilities supported by nvim-cmp
-			local capabilities = vim.lsp.protocol.make_client_capabilities()
-			capabilities = require('cmp_nvim_lsp').update_capabilities(capabilities)
+	config = function ()
 
-			-- setup the haxe server.
-			require ('lspconfig').haxe_language_server.setup {
-				cmd = { "node", "/home/snsvrno/Source/haxe-language-server/bin/server.js" },
-				capabilities = capabilities,
-			}
+		-- Add additional capabilities supported by nvim-cmp
+		local capabilities = vim.lsp.protocol.make_client_capabilities()
+		capabilities = require('cmp_nvim_lsp').update_capabilities(capabilities)
 
-		end
+		-- setup the haxe server.
+		require ('lspconfig').haxe_language_server.setup {
+			cmd = { "node", "/home/snsvrno/Source/haxe-language-server/bin/server.js" },
+			capabilities = capabilities,
+		}
 
-	}
-end
+	end,
+
+} end

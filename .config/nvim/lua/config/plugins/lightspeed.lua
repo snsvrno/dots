@@ -1,11 +1,9 @@
-return function(use)
-	use {
+return function(use)use {
 
-		'ggandor/lightspeed.nvim',
+	'ggandor/lightspeed.nvim',
 
-		config = function()
+	config = function()
 
-		end
+	end,
 
-	}
-end
+} end

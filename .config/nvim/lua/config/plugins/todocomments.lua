@@ -1,17 +1,14 @@
-return function(use)
+return function(use) use {
 
-	use {
+	"folke/todo-comments.nvim",
 
-		"folke/todo-comments.nvim",
+	requires = {
+		"folke/trouble.nvim",
+		"nvim-lua/plenary.nvim",
+	},
 
-		requires = {
-			"folke/trouble.nvim",
-			"nvim-lua/plenary.nvim",
-		},
+	config = function()
+		require("todo-comments").setup { }
+	end,
 
-		config = function()
-
-		end,
-
-	}
-end
+} end

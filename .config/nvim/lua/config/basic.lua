@@ -12,6 +12,6 @@ vim.opt.shiftwidth = 2
 vim.opt.tabstop = 2 				-- the number of spaces a tab displays.
 vim.opt.softtabstop = 0
 vim.opt.termguicolors = true
-vim.opt.scrolloff = 10				-- shows at least 10 lines on the screen at once when scrolling.
+vim.opt.scrolloff = 3				-- shows at least xxx lines on the screen at once when scrolling.
 
 vim.cmd[[set clipboard^=unnamed,unnamedplus]]

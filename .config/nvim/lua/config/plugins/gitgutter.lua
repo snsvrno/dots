@@ -1,5 +1,5 @@
-return function(use)
-	use {
+return function(use) use {
+
 		"airblade/vim-gitgutter",
 
 		config = function()
@@ -9,7 +9,6 @@ return function(use)
 			vim.cmd [[let g:gitgutter_sign_removed_first_line = '^^']]
 			vim.cmd [[let g:gitgutter_sign_removed_above_and_below = '{']]
 			vim.cmd [[let g:gitgutter_sign_modified_removed = 'ww']]
-		end
+		end,
 
-	}
-end
+} end

@@ -5,11 +5,13 @@ return {
 
 	plugins = {
 
+		'plenary',
 		'todocomments',
 		'telescope',
 		'windline',
 		'lightspeed',
 		'gitgutter',
+		'nvimtree',
 
 		'lsp',
 		'luasnip',

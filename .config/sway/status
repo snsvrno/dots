@@ -1,0 +1,20 @@
+#!/bin/sh
+
+date=$(date +'%m/%d %H:%M')
+
+battery_level=$(cat /sys/class/power_supply/BAT0/capacity)
+
+battery=
+if [ $battery_level -gt 95 ]; then
+	battery="  "
+elif [ $battery_level -gt 75 ]; then
+	battery="  "
+elif [ $battery_level -gt 50 ]; then
+	battery="  "
+elif [ $battery_level -gt 25]; then
+	battery="  "
+else
+	battery="  "
+fi
+
+echo "$date $battery_level $battery"

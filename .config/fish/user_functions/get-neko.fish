@@ -29,7 +29,7 @@ function get-neko -d "Locally installs neko"
 	rm $neko_name.tar.gz
 	rm -fR $neko_name
 
-	command echo $argv > .neko/version
+	command echo $requested_version > .neko/version
 	direnv-add PATH_add ".neko/\$(cat .neko/version)"
-	direnv-add path_add LD_LIBRARY_PATH".neko/\$(cat .neko/version)"
+	direnv-add path_add LD_LIBRARY_PATH ".neko/\$(cat .neko/version)"
 end

@@ -1,16 +1,16 @@
 function git-status
-	set --local git_watch $HOME/.gitwatch
-	set --local opp "read"
+	set -f git_watch $HOME/.gitwatch
+	set -f opp "read"
 
 	if test -n "$argv[1]"
 		set opp $argv[1]
 	end
 
 	if test $opp = "add"
-		set --local repo_path (pwd -P)
+		set -f repo_path (pwd -P)
 		echo adding $repo_path
 
-		set --local git_watch_contents
+		set -f git_watch_contents
 		if test -e $git_watch
 			set git_watch_contents (cat $git_watch)
 		end
@@ -32,21 +32,23 @@ function git-status
 			return
 		end
 
-		set --local repo_list (cat $git_watch)
+		set -f repo_list (cat $git_watch)
 		for line in $repo_list
-			# echo $line
-			set --local git_command for-each-ref --format="%(push:track)" refs/heads
-			set --local git_status (git --git-dir=$line/.git --work-tree=$line $git_command)
 
-			if test -n $git_status
-				echo (set_color -i blue) $line (set_color normal) $git_status
+			# echo $line
+			set -f git_command for-each-ref --format="%(push:track)" refs/heads
+
+			set git_status " "
+			set -f git_status (git --git-dir=$line/.git --work-tree=$line $git_command)
+
+			if test "$git_status" != " "
+				echo (set_color -i blue) $line(set_color normal) (set_color -o yellow)$git_status(set_color normal)
+			else
+				echo (set_color -d) $line (set_color normal)
 			end
 
 		end
 
-		# git --git-dir=$HOME/.dots/ --work-tree=$HOME $argv status
-
 	end
-
 
 end

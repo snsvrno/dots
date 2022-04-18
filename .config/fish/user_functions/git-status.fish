@@ -45,8 +45,15 @@ function git-status
 			return
 		end
 
+		# sets the ssh-agent so we don't need to get the password a million times.
+		set -f garbage (eval (ssh-agent -c))
+		command ssh-add -t 2m
+
 		set -f repo_list (cat $git_watch)
 		for line in $repo_list
+
+			# run the fetch to see if its out of sync
+			command git --git-dir=$line/.git --work-tree=$line fetch
 
 			# echo $line
 			set -f git_command for-each-ref --format="%(push:track)" refs/heads

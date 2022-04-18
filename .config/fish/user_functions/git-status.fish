@@ -7,8 +7,12 @@ function git-status
 	end
 
 	if test $opp = "add"
-		set -f repo_path (pwd -P)
-		echo adding $repo_path
+		set -f arguement_path "."
+		if test -n "$argv[2]"
+			set arguement_path $argv[2]
+		end
+
+		set -f repo_path (realpath $arguement_path)
 
 		set -f git_watch_contents
 		if test -e $git_watch
@@ -16,16 +20,25 @@ function git-status
 		end
 
 		if contains $repo_path $git_watch_contents
-			echo "contains"
+			echo "'$repo_path' is already being watched"
 			# we don't do anything
 		else
-			echo "not contains"
+			echo "watching '$repo_path'"
 			echo $repo_path >> $git_watch
 		end
+
+		# sorts the list alphabetically
+		command sort $git_watch -o $git_watch
 
 	else
 		# we want to check the status of all the repositories and
 		# nicely display it to the screen
+	
+		set -f show_all false
+		if test -n "$argv[1]"; and test "$argv[1]" = "-a"
+			set show_all true
+		end
+
 
 		if not test -e $git_watch
 			echo "no repos found"
@@ -37,13 +50,11 @@ function git-status
 
 			# echo $line
 			set -f git_command for-each-ref --format="%(push:track)" refs/heads
-
-			set git_status " "
 			set -f git_status (git --git-dir=$line/.git --work-tree=$line $git_command)
 
-			if test "$git_status" != " "
+			if test "$git_status" != " "; and test "$git_status" != ""
 				echo (set_color -i blue) $line(set_color normal) (set_color -o yellow)$git_status(set_color normal)
-			else
+			else if $show_all
 				echo (set_color -d) $line (set_color normal)
 			end
 

@@ -5,6 +5,7 @@ return {
 
 	plugins = {
 
+		'dap',
 		'plenary',
 		'todocomments',
 		'telescope',
@@ -12,6 +13,7 @@ return {
 		'lightspeed',
 		'gitgutter',
 		'nvimtree',
+--		'treesitter',
 
 		'lsp',
 		'luasnip',

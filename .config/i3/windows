@@ -1,0 +1,5 @@
+# hashlink
+for_window [class="hl" instance="hl"] floating enable
+
+# gnome screenshot utility
+for_window [class="gnome-screenshot" id=".*Screenshot.*"] floating enable

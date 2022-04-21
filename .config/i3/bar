@@ -1,0 +1,45 @@
+#left monitor
+bar {
+	i3bar_command i3bar --transparency
+
+	font pango:Fantasque Sans Mono Nerd Font Complete 12
+	output HDMI-0
+	position top
+	tray_output none
+
+	colors {
+		background #00000000
+	}
+
+}
+
+# center monitor 
+bar {
+	i3bar_command i3bar --transparency
+
+	font pango:Fantasque Sans Mono Nerd Font Complete 18
+	output DP-4
+	position top
+	tray_output DP-4
+
+	status_command i3status
+
+	colors {
+		background #00000000
+	}
+
+}
+
+# right monitor
+bar {
+	i3bar_command i3bar --transparency
+
+	font pango:Fantasque Sans Mono Nerd Font Complete 12
+	output DP-3
+	position top
+	tray_output none
+
+	colors {
+		background #00000000
+	}
+}

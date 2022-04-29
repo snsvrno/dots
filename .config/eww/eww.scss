@@ -1,0 +1,46 @@
+@import 'colors.scss';
+
+* {
+	all: unset; //Unsets everything so you can style everything from scratch
+}
+
+//Global Styles
+.bar {
+	background-color: transparent;
+	color: $color_foreground;
+	padding: 10px;
+	font-size: 1.75em;
+
+	.workspaces button {
+		padding: 0px 5px;
+		border-radius: 4px;
+	}
+}
+
+// the center monitor, which is a higher DPI
+.center {
+	font-size: 2.5em;
+	
+	.workspaces button {
+		padding: 0px 10px;
+		border-radius: 8px;
+	}
+
+}
+
+.workspaces {
+	
+	button:hover {
+		background-color: $color_accent2;
+	}
+
+	button.focused {
+		background-color: $color_accent1;
+		color: $color_background;
+	}
+
+	button.selected {
+		background-color: $color_dim;
+	}
+}
+

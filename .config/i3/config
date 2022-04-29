@@ -27,7 +27,7 @@ bindsym $mod+Shift+Return exec "$terminal --config $HOME/.config/kitty/kitty-sec
 include local
 include startup # any additional startup apps we need to run.
 include windows # any special window modes and settings
-include bar
+# include bar
 
 ##############
 # visuals
@@ -107,6 +107,10 @@ bindsym $mod+Shift+7 move container to workspace number $ws7
 bindsym $mod+Shift+8 move container to workspace number $ws8
 bindsym $mod+Shift+9 move container to workspace number $ws9
 bindsym $mod+Shift+0 move container to workspace number $ws10
+
+workspace $ws1 output DP-4
+workspace $ws2 output HDMI-0
+workspace $ws3 output DP-3
 
 # change focus
 bindsym $mod+j focus left

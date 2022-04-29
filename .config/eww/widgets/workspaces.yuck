@@ -1,0 +1,12 @@
+(defpoll workspace-json :interval "250ms" "i3-msg -t get_workspaces")
+(defwidget workspaces [monitor]
+	(box :class "workspaces" :orientation "h" :space-evenly true :halign "start" :spacing 10
+		(for ws in workspace-json
+			(button 
+				:class {ws.focused ? "focused" : ws.visible ? "selected" : "" }
+				:visible {monitor == ws.output ? true : false }
+				:onclick "i3 workspace number ${ws.num}" '${ws.num}'
+			)
+		)
+	)
+)

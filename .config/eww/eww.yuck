@@ -1,0 +1,47 @@
+(include "./widgets/workspaces.yuck")
+(include "./widgets/datetime.yuck")
+
+(defwidget bar [monitor]
+	(centerbox :orientation "h" :class "bar"
+		(workspaces :monitor monitor)
+		(box)
+		(box :halign "end"
+			(date)
+			(time)
+		)
+	)
+)
+
+(defwidget shortbar [monitor]
+	(centerbox :orientation "h" :class "bar"
+		(workspaces :monitor monitor)
+		(box)
+		(time)
+	)
+)
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+(defwindow center
+	:monitor 0
+	:windowtype "dock"
+	:geometry (geometry :x "0%" :y "0%" :width "90%" :height "10px" :anchor "top center")
+	:reserve (struts :side "top" :distance "4%")
+	(bar :monitor "DP-4")
+)
+
+(defwindow left
+	:monitor 2
+	:windowtype "dock"
+	:geometry (geometry :x "0%" :y "0%" :width "90%" :height "10px" :anchor "top center")
+	:reserve (struts :side "top" :distance "4%")
+	(shortbar :monitor "HDMI-0")
+)
+
+(defwindow right
+	:monitor 1
+	:windowtype "dock"
+	:geometry (geometry :x "0%" :y "0%" :width "90%" :height "10px" :anchor "top center")
+	:reserve (struts :side "top" :distance "4%")
+	(shortbar :monitor "DP-3")
+)

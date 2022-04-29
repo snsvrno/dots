@@ -1,11 +1,7 @@
 # STARTUP APPS
 
 exec --no-startup-id picom -b # window composer
-# exec --no-startup-id dex --autostart --environment i3 # idk
-# exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork # lock screen
-# exec --no-startup-id nm-applet # network applet
-
-# exec_always --no-startup-id $HOME/.config/polybar/launch.sh # launches all the polybars
+exec --no-startup-id eww
 
 # sets the wallpaper
 exec "feh /usr/share/backgrounds/ --randomize --bg-fill"

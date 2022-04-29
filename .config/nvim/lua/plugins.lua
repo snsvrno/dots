@@ -15,12 +15,14 @@ return {
 		'nvimtree',
 --		'treesitter',
 
+		'vista',
 		'lsp',
 		'luasnip',
 		'cmp',
 	},
 
 	noconfig = {
-		"sheerun/vim-polyglot"
+		"sheerun/vim-polyglot",
+		"elkowar/yuck.vim",
 	}
 }

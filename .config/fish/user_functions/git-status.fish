@@ -69,7 +69,7 @@ function git-status
 
 		# sets the ssh-agent so we don't need to get the password a million times.
 		set -f garbage (eval (ssh-agent -c))
-		command ssh-add -t 2m 2>1
+		command ssh-add -t 2m 2>/dev/null
 
 		set -f repo_list (cat $git_watch)
 		for line in $repo_list
@@ -78,7 +78,7 @@ function git-status
 				echo (set_color -d red)$line (set_color normal) no longer exists
 
 			else
-				command git --git-dir=$line/.git --work-tree=$line fetch >/dev/null 2>1
+				command git --git-dir=$line/.git --work-tree=$line fetch >/dev/null 2>/dev/null
 				if test $status -ne 0
 					echo (set_color -d red)$line(set_color normal) is not a repo
 				else

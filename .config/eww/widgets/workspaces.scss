@@ -1,0 +1,27 @@
+.bar {
+	.workspaces button {
+		padding: 0px 5px;
+		border-radius: 4px;
+	}
+}
+
+.center {
+	.workspaces button {
+		padding: 0px 10px;
+		border-radius: 8px;
+	}
+}
+
+.workspaces {
+	button:hover {
+		background-color: $color_accent2;
+	}
+	button.focused {
+		background-color: $color_accent1;
+		color: $color_background;
+	}
+	button.selected {
+		background-color: $color_dim;
+	}
+}
+

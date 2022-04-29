@@ -1,10 +1,11 @@
 (include "./widgets/workspaces.yuck")
 (include "./widgets/datetime.yuck")
+(include "./widgets/music.yuck")
 
 (defwidget bar [monitor]
 	(centerbox :orientation "h" :class "bar"
 		(workspaces :monitor monitor)
-		(box)
+		(music)
 		(box :halign "end"
 			(date)
 			(time)

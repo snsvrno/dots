@@ -1,0 +1,31 @@
+(defwidget music []
+	(box :class "music" :orientation "h" :halign "center"
+		:space-evenly false
+		:spacing 10
+		:visible {musicstatus.status == "[empty]" ? false : true}
+
+		(box :class "music-controls"
+			(button :onclick "mpc prev" "玲")
+		)
+		
+		(box :class "music-info" :space-evenly false :spacing 10
+			"" {musicstatus.song}
+		)
+
+		(box :class "music-info" :space-evenly false :spacing 10
+			" " {musicstatus.album}
+		)
+
+		(box :class "music-info" :space-evenly false :spacing 10
+			" " {musicstatus.artist}
+		)
+
+		(box :class "music-controls" :spacing 10
+			(button :onclick "mpc toggle" {musicstatus.status == "[playing]" ? "" : "契"})
+			(button :onclick "mpc next" "怜")
+		)
+	)
+)
+
+(defpoll musicstatus :interval "1s"
+	"$HOME/.config/eww/scripts/mpc.sh")

@@ -1,4 +1,4 @@
-#! /usr/bin/env bash
+#!/bin/sh
 # https://gist.github.com/johnallen3d/61e2a165a5e13218c7621f6ba31a11fd
 # modified to include album name
 

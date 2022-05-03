@@ -1,4 +1,7 @@
-(defpoll workspace-json :interval "250ms" "i3-msg -t get_workspaces")
+(defpoll workspace-json 
+	:interval "1s"
+	"i3-msg -t get_workspaces")
+
 (defwidget workspaces [monitor]
 	(box :class "workspaces" :orientation "h" :space-evenly true :halign "start" :spacing 10
 		(for ws in workspace-json

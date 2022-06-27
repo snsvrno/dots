@@ -5,7 +5,7 @@ return {
 
 	plugins = {
 
-		'dap',
+--		'dap',
 		'plenary',
 		'todocomments',
 		'telescope',
@@ -15,7 +15,7 @@ return {
 		'nvimtree',
 --		'treesitter',
 
-		'vista',
+--		'vista',
 		'lsp',
 		'luasnip',
 		'cmp',

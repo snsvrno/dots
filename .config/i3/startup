@@ -1,0 +1,10 @@
+# STARTUP APPS
+#
+# window composer
+exec --no-startup-id "picom -b --experimental-backends"
+
+# widget manager / bar
+exec --no-startup-id "eww daemon"
+
+# sets the wallpaper
+exec "feh /usr/share/backgrounds/outrun --randomize --bg-fill"

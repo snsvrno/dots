@@ -16,6 +16,10 @@ return function(use) use {
 		require ('lspconfig').haxe_language_server.setup {
 			cmd = { "node", "/home/snsvrno/Source/haxe-language-server/bin/server.js" },
 			capabilities = capabilities,
+			on_attach = function(client, bufnr)
+				local navic = require("nvim-navic")
+				if navic ~= nil then navic.attach(client, bufnr) end
+			end
 		}
 
 	end,

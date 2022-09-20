@@ -1,7 +1,10 @@
 vim.opt.list = true					-- enables list characters
 vim.opt.showbreak = "<< "		-- line breaks start with ">>"
 vim.opt.breakindent = true	-- line break indents
-vim.opt.number = true				-- line numbers
+vim.cmd[[set number relativenumber]]
+vim.cmd[[set nu rnu]]
+--vim.opt.number = "relative"	-- line numbers
+--vim.opt.nu = "rnu"
 vim.opt.showmatch = true		-- shows matching brackets
 vim.opt.mouse = "a"					-- enable mouse functionality
 vim.opt.hlsearch = true			-- highlight search results

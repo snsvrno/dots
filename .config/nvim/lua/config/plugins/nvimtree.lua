@@ -9,6 +9,7 @@ return function(use) use {
 	config = function()
 		require('nvim-tree').setup { }
 
+		vim.cmd [[set termguicolors]]
 		vim.cmd [[nnoremap <F12> :NvimTreeToggle<CR>]]
 	end,
 

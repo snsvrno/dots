@@ -7,4 +7,4 @@ exec --no-startup-id "picom -b --experimental-backends"
 exec --no-startup-id "eww daemon"
 
 # sets the wallpaper
-exec "feh /usr/share/backgrounds/outrun --randomize --bg-fill"
+exec "feh ~/.backgrounds/patterns/ --randomize --bg-tile"

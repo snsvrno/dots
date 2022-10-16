@@ -1,0 +1,16 @@
+(defwidget wifi []
+	(box :class "wifi"
+		wifiName
+	)
+)
+
+(defwidget wifistrength []
+	(box :class "wifi_strength"
+		wifiStrength
+	)
+)
+(defpoll wifiName :interval "10s"
+	"scripts/wifi_name.sh")
+
+(defpoll wifiStrength :interval "10s"
+	"scripts/wifi_strength.sh")

@@ -1,13 +1,17 @@
 (defwidget time []
-	(box :class "time" :orientation "h" :halign "end" time)
+	(box :class "time"
+		time
+	)
 )
 
 (defpoll time :interval "10s"
-	"date +'%H:%M    '")
+	"date +'%H:%M'")
 
 (defwidget date []
-	(box :class "date" :orientation "h" :halign "end" date)
+	(box :class "date"
+		date
+	)
 )
 
 (defpoll date :interval "10s"
-	"date +'%m/%d    '")
+	"date +'%m/%d'")

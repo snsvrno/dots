@@ -15,4 +15,4 @@ else
 	battery="  "
 fi
 
-echo "$batter_level $battery"
+echo "$battery"

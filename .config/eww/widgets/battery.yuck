@@ -1,10 +1,18 @@
-(defwidget battery []
-	(box :class "battery"
-			 :orientation "h"
-			 :halign "end"
-		battery
+(defwidget batteryicon []
+	(box :class "batteryIcon"
+		batteryicon
 	)
 )
 
-(defpoll battery :interval "10s"
-	"scripts/battery.sh")
+(defwidget batterylevel []
+	(box :class "batteryLevel"
+		batterylevel
+	)
+)
+
+(defpoll batteryicon :interval "10s"
+	"scripts/battery_icon.sh")
+
+
+(defpoll batterylevel :interval "10s"
+	"scripts/battery_level.sh")

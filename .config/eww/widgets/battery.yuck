@@ -1,0 +1,10 @@
+(defwidget battery []
+	(box :class "battery"
+			 :orientation "h"
+			 :halign "end"
+		battery
+	)
+)
+
+(defpoll battery :interval "10s"
+	"scripts/battery.sh")

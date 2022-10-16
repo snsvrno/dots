@@ -5,6 +5,14 @@
 	}
 }
 
+.small {
+	.workspaces button {
+		padding: 0px 12px;
+		border-radius: 4px;
+		margin: 12px 0px 0px 12px;
+	}
+}
+
 .center {
 	.workspaces button {
 		padding: 0px 10px;
@@ -13,6 +21,9 @@
 }
 
 .workspaces {
+	button {
+		background-color: $color_background;
+	}
 	button:hover {
 		background-color: $color_accent2;
 	}

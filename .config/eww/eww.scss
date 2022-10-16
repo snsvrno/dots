@@ -1,6 +1,9 @@
 @import 'colors.scss';
 @import './widgets/music.scss';
 @import './widgets/workspaces.scss';
+@import './widgets/container.scss';
+@import './widgets/battery.scss';
+
 
 * {
 	all: unset; //Unsets everything so you can style everything from scratch
@@ -17,5 +20,10 @@
 // the center monitor, which is a higher DPI
 .center {
 	font-size: 1.5em;
+}
+
+.small {
+	font-size: 1.25em;
+	padding: 2px;
 }
 

@@ -1,6 +1,7 @@
 (include "./widgets/workspaces.yuck")
 (include "./widgets/datetime.yuck")
 (include "./widgets/music.yuck")
+(include "./widgets/battery.yuck")
 
 (defwidget bar [monitor]
 	(centerbox :orientation "h" :class "bar"
@@ -21,7 +22,29 @@
 	)
 )
 
+(defwidget smallbar [monitor]
+	(centerbox :orientation "h" :class "small"
+		(box
+			(workspaces :monitor monitor)
+		)
+		(box)
+		(box :class "container"
+				 :halign "end"
+				 :spacing 10
+			(battery)
+			(time)
+		)
+	)
+)
+
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+(defwindow laptop
+	:windowtype "dock"
+	:geometry (geometry :x "0%" :y "0%" :width "90%" :height "10px" :anchor "top center")
+	:reserve (struts :side "top" :distance "4%")
+	(smallbar :monitor "LVDS-1")
+)
 
 (defwindow center
 	:monitor 0

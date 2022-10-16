@@ -13,15 +13,12 @@ return {
 		'lightspeed',
 		'gitgutter',
 		'nvimtree',
-		'navic',
-		--		'treesitter',
 
 --		'vista',
 		'lsp',
 		'luasnip',
 		'cmp',
 		'scrollbar',
---		'indent',
 	},
 
 	noconfig = {

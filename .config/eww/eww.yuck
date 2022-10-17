@@ -2,6 +2,7 @@
 (include "./widgets/datetime.yuck")
 (include "./widgets/music.yuck")
 (include "./widgets/battery.yuck")
+(include "./widgets/vpn.yuck")
 (include "./widgets/wifi.yuck")
 
 (defwidget bar [monitor]
@@ -10,7 +11,9 @@
 		(music)
 		(box :class "container"
 				 :halign "end"
+				 :space-evenly "false"
 				 :spacing 30
+			(vpn)
 			(wifi)
 			(date)
 			(time)
@@ -37,8 +40,10 @@
 		(box)
 		(box :class "container"
 				 :halign "end"
+				 :space-evenly "false"
 				 :spacing 30
 			(batterylevel)
+			(vpn)
 			(wifi)
 			(wifistrength)
 			(date)

@@ -1,5 +1,5 @@
 (defwidget wifi []
-	(box :class "wifi"
+	(box :class "widget wifi"
 		wifiName
 	)
 )

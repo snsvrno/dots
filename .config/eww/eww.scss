@@ -4,8 +4,9 @@
 @import './widgets/container.scss';
 @import './widgets/battery.scss';
 @import './widgets/datetime.scss';
+@import './widgets/vpn.scss';
 @import './widgets/wifi.scss';
-
+@import './widgets/widget.scss';
 
 * {
 	all: unset; //Unsets everything so you can style everything from scratch

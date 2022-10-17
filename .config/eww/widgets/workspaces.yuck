@@ -3,7 +3,12 @@
 	"i3-msg -t get_workspaces")
 
 (defwidget workspaces [monitor]
-	(box :class "workspaces" :orientation "h" :space-evenly true :halign "start" :spacing 10
+	(box
+		:class "container workspaces"
+		:orientation "h"
+		:halign "start"
+		:spacing 10
+
 		(for ws in workspace-json
 			(button 
 				:class {ws.focused ? "focused" : ws.visible ? "selected" : "" }

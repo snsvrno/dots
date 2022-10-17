@@ -1,13 +1,8 @@
 .workspaces button {
 	padding: 5px 12px;
-	border-radius: 4px;
-	margin: 12px 0px 0px 12px;
 }
 
 .workspaces {
-	button {
-		background-color: $color_background;
-	}
 
 	button:hover {
 		background-color: $color_accent2;
@@ -19,7 +14,7 @@
 	}
 
 	button.selected {
-		background-color: $color_dim;
+		color: $color_accent1;
 	}
 }
 

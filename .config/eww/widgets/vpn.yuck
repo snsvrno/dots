@@ -1,0 +1,9 @@
+(defwidget vpn []
+	(box :class "widget vpn"
+		vpn
+	)
+)
+
+(defpoll vpn :interval "10s"
+	"scripts/expressvpn.sh")
+

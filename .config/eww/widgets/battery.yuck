@@ -1,11 +1,11 @@
 (defwidget batteryicon []
-	(box :class "batteryIcon"
+	(box :class "widget batteryIcon"
 		batteryicon
 	)
 )
 
 (defwidget batterylevel []
-	(box :class "batteryLevel"
+	(box :class "widget batteryLevel"
 		batterylevel
 	)
 )

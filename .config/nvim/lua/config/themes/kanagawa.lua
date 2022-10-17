@@ -16,8 +16,8 @@ return function(use)
 
 			require('kanagawa').setup {
 				undercurls = true,
-				statementStyle = "bold",
-				keywordStyle = "italic",
+				statementStyle = { bold = true },
+				keywordStyle = { italic = true },
 
 				transparent = true,
 				dimInteractive = true,

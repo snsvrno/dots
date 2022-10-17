@@ -8,7 +8,10 @@
 	(centerbox :orientation "h" :class "bar"
 		(workspaces :monitor monitor)
 		(music)
-		(box :halign "end"
+		(box :class "container"
+				 :halign "end"
+				 :spacing 30
+			(wifi)
 			(date)
 			(time)
 		)
@@ -19,7 +22,10 @@
 	(centerbox :orientation "h" :class "bar"
 		(workspaces :monitor monitor)
 		(box)
-		(time)
+		(box :class "container"
+				 :halign "end"
+			(time)
+			)
 	)
 )
 
@@ -31,6 +37,7 @@
 		(box)
 		(box :class "container"
 				 :halign "end"
+				 :spacing 30
 			(batterylevel)
 			(wifi)
 			(wifistrength)

@@ -1,6 +1,8 @@
 (defwidget vpn []
 	(box :class "widget vpn"
+	:space-evenly "false"
 		vpn
+		(label :class "icon" :text " ")
 	)
 )
 

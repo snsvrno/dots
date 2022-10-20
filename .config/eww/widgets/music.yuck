@@ -5,7 +5,7 @@
 		:visible {musicstatus.status == "[empty]" ? false : true}
 
 		(box :class "music-controls"
-			(button :onclick "mpc prev" "玲")
+			(button :class "icon" :onclick "mpc prev" "玲")
 		)
 		
 		(box :class "music-info" :space-evenly false :spacing 10
@@ -22,7 +22,7 @@
 
 		(box :class "music-controls" :spacing 10
 			(button :onclick "mpc toggle" {musicstatus.status == "[playing]" ? "" : "契"})
-			(button :onclick "mpc next" "怜")
+			(button :class "icon" :onclick "mpc next" "怜")
 		)
 	)
 )

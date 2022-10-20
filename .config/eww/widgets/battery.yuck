@@ -1,5 +1,5 @@
 (defwidget batteryicon []
-	(box :class "widget batteryIcon"
+	(box :class "icon widget batteryIcon"
 		batteryicon
 	)
 )

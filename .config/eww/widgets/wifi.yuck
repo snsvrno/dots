@@ -1,16 +1,28 @@
 (defwidget wifi []
 	(box :class "widget wifi"
+			 :space-evenly: "false"
 		wifiName
 	)
 )
+
+(defpoll wifiName :interval "10s"
+	"scripts/wifi_name.sh")
+
 
 (defwidget wifistrength []
 	(box :class "wifi_strength"
 		wifiStrength
 	)
 )
-(defpoll wifiName :interval "10s"
-	"scripts/wifi_name.sh")
 
 (defpoll wifiStrength :interval "10s"
 	"scripts/wifi_strength.sh")
+
+(defwidget wifiicon []
+	(box :class "icon"
+		wifiIcon
+	)
+)
+
+(defpoll wifiIcon :interval "10s"
+	"scripts/wifi_icon.sh")

@@ -1,6 +1,8 @@
 (defwidget time []
 	(box :class "widget time"
+		:space-evenly "false"
 		time
+		(label :class "icon" :text " ")
 	)
 )
 
@@ -9,7 +11,9 @@
 
 (defwidget date []
 	(box :class "widget date"
+		:space-evenly "false"
 		date
+		(label :class "icon" :text " ")
 	)
 )
 

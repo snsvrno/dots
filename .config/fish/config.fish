@@ -16,3 +16,4 @@ starship init fish | source
 abbr -a -g git " git"
 abbr -a -g dots " dots"
 abbr -a -g dotss " dots-status"
+abbr -a -g bc " bc --quiet -i"

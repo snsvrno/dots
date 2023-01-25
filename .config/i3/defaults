@@ -1,16 +1,4 @@
 ###################################################################
-## APPS ###########################################################
-###################################################################
-
-set $terminal kitty
-set $terminal_alt kitty --config $HOME/.config/kitty/kitty-secondary.conf
-set $launcher rofi -modi drun,run -show drun
-set $web_browser cd ~/Downloads && surf www.startpage.com
-set $web_browser_alt cd ~/Downloads && surf $(rofi -dmenu -lines 0 -p 'url')
-set $file_manager kitty -e nnn
-set $power_menu rofi -show p -modi p:rofi-power-menu -width 20 -lines 6
-set $vpn rofi-expressvpn
-###################################################################
 ## DEFAULTS #######################################################
 ###################################################################
 
@@ -127,67 +115,3 @@ bindsym $mod+Shift+8 move container to workspace $ws8; workspace $ws8
 
 #
 # $ 131.99 # the check.
-##########################################################
-## SHORTCUTS #############################################
-##########################################################
-
-# SYSTEM ######################
-# reload the configuration file
-bindsym $mod+Shift+c exec --no-startup-id $HOME/.config/i3/make
-# restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
-bindsym $mod+Shift+r restart
-# kills the focused window (closing it)
-bindsym $mod+Shift+q kill
-
-# APPS ########################
-bindsym $mod+d exec --no-startup-id "$launcher"
-bindsym $mod+Return exec --no-startup-id "$terminal"
-
-bindsym $mod+F2 exec --no-startup-id $web_browser
-bindsym $mod+Shift+F2 exec --no-startup-id $web_browser_alt
-bindsym $mod+F3 exec --no-startup-id $file_manager
-bindsym $mod+Shift+F3 --no-startup-id $file_manager_alt
-bindsym $mod+p exec --no-startup-id $power_menu
-bindsym $mod+F1 exec --no-startup-id $vpn
-###################################################################
-## VISUAL #########################################################
-###################################################################
-
-default_border pixel 1
-default_floating_border normal
-
-# Hide borders
-hide_edge_borders both
-default_border pixel 0
-
-# Set inner/outer gaps
-gaps inner 14
-gaps outer -2
-####################################################################
-## STARTUP #########################################################
-####################################################################
-
-# widget manager / bar
-exec --no-startup-id "eww daemon"
-# for password entry
-exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
-# sets the wallpaper
-exec --no-startup-id "feh ~/.backgrounds/patterns/ --randomize --bg-tile"
-
-exec --no-startup-id "picom -b"
-
-# exec_always --no-startup-id ff-theme-util
-exec_always --no-startup-id fix_xcursor
-exec --no-startup-id eww open laptop
-################################################################
-#### FOR WINDOW ################################################
-################################################################
-
-# hashlink
-for_window [class="hl" instance="hl"] floating enable
-
-# gnome screenshot utility
-for_window [class="gnome-screenshot" id=".*Screenshot.*"] floating enable
-
-# st windows, used in surf
-for_window [class="st-256color"] floating enable

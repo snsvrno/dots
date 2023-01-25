@@ -1,0 +1,14 @@
+###################################################################
+## VISUAL #########################################################
+###################################################################
+
+default_border pixel 1
+default_floating_border normal
+
+# Hide borders
+hide_edge_borders both
+default_border pixel 0
+
+# Set inner/outer gaps
+gaps inner 14
+gaps outer -2

@@ -1,0 +1,12 @@
+###################################################################
+## APPS ###########################################################
+###################################################################
+
+set $terminal kitty
+set $terminal_alt kitty --config $HOME/.config/kitty/kitty-secondary.conf
+set $launcher rofi -modi drun,run -show drun
+set $web_browser cd ~/Downloads && surf www.startpage.com
+set $web_browser_alt cd ~/Downloads && surf $(rofi -dmenu -lines 0 -p 'url')
+set $file_manager kitty -e nnn
+set $power_menu rofi -show p -modi p:rofi-power-menu -width 20 -lines 6
+set $vpn rofi-expressvpn

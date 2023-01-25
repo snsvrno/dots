@@ -24,5 +24,6 @@ return {
 	noconfig = {
 		"sheerun/vim-polyglot",
 		"elkowar/yuck.vim",
+		"wakatime/vim-wakatime"
 	}
 }

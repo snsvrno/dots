@@ -1,0 +1,7 @@
+[wifi]
+command=./expressvpn.sh
+interval=1
+
+[time]
+command=./date.sh
+interval=5

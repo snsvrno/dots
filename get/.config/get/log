@@ -1,0 +1,74 @@
+06/12 07:13:06 setting version to 2.3.0
+06/12 07:13:06 getting  binary to install in /home/snsvrno/Source/neko
+06/12 07:13:06   is already installed at /home/snsvrno/Source/neko
+06/12 07:13:24 setting version to 2.3.0
+06/12 07:13:24 getting  binary to install in /home/snsvrno/Source/neko
+06/12 07:13:24   is already installed at /home/snsvrno/Source/neko
+06/12 07:14:03 installing neko
+06/12 07:14:04 setting version to 2.3.0
+06/12 07:14:04 getting  binary to install in /home/snsvrno/Source/neko
+06/12 07:14:04 downloading ...
+06/12 07:19:53 installing neko
+06/12 07:19:55 setting version to 2.3.0
+06/12 07:19:55 getting neko binary to install in /home/snsvrno/Source/neko
+06/12 07:19:55 url: https://api.github.com/repos/HaxeFoundation/neko/releases
+06/12 07:19:56 asset url: https://api.github.com/repos/HaxeFoundation/neko/releases/20957089/assets
+06/12 07:19:56 archive name: 
+06/12 07:19:56 installing in path: /home/snsvrno/Source/neko/2.3.0
+06/12 07:22:24 installing neko
+06/12 07:22:26 setting version to 2.3.0
+06/12 07:22:26 getting neko binary to install in /home/snsvrno/Source/neko
+06/12 07:22:26 url: https://api.github.com/repos/HaxeFoundation/neko/releases
+06/12 07:22:27 asset url: https://github.com/HaxeFoundation/neko/releases/download/v2-3-0/neko-2.3.0-linux.tar.gz
+06/12 07:22:27 archive name: neko-2.3.0-linux.tar.gz
+06/12 07:22:27 installing in path: /home/snsvrno/Source/neko/2.3.0
+06/12 07:27:17 installing neko
+06/12 07:27:19 setting version to 2.3.0
+06/12 07:27:19 getting neko binary to install in /home/snsvrno/Source/neko
+06/12 07:27:19 url: https://api.github.com/repos/HaxeFoundation/neko/releases
+06/12 07:27:20 asset url: https://github.com/HaxeFoundation/neko/releases/download/v2-3-0/neko-2.3.0-linux.tar.gz
+06/12 07:27:20 temp path: /home/snsvrno/Source
+06/12 07:27:20 archive name: neko-2.3.0-linux.tar.gz
+06/12 07:27:20 installing in path: /home/snsvrno/Source/neko/2.3.0
+06/12 07:27:21 executable path: ./neko-v2-0/bin/neko
+06/12 07:27:21 archive root path: ./neko-v2-0/bin
+06/12 07:33:19 installing neko
+06/12 07:33:21 setting version to 2.3.0
+06/12 07:33:21 getting neko binary to install in /home/snsvrno/Source/neko
+06/12 07:33:22 url: https://api.github.com/repos/HaxeFoundation/neko/releases
+06/12 07:33:23 asset url: https://github.com/HaxeFoundation/neko/releases/download/v2-3-0/neko-2.3.0-linux.tar.gz
+06/12 07:33:23 temp path: /home/snsvrno/Source
+06/12 07:33:23 archive name: neko-2.3.0-linux.tar.gz
+06/12 07:33:23 installing in path: /home/snsvrno/Source/neko/2.3.0
+06/12 07:33:24 executable path: ./neko-v2-0/bin/neko
+06/12 07:33:24 archive root path: ./neko-v2-0/bin
+06/12 07:35:36 installing neko
+06/12 07:35:37 setting version to 2.3.0
+06/12 07:35:37 getting neko binary to install in /home/snsvrno/Source/neko
+06/12 07:35:37 neko 2.3.0 is already installed at /home/snsvrno/Source/neko
+06/13 15:58:41 installing haxe
+06/13 15:58:43 setting version to 4.3.1
+06/13 15:58:43 getting haxe binary to install in /home/snsvrno/Source/haxe
+06/13 15:58:43 haxe 4.3.1 is already installed at /home/snsvrno/Source/haxe
+06/13 15:58:43 installing neko
+06/13 15:58:44 setting version to 2.3.0
+06/13 15:58:44 getting neko binary to install in /home/snsvrno/Source/neko
+06/13 15:58:44 neko 2.3.0 is already installed at /home/snsvrno/Source/neko
+06/14 14:38:10 installing haxe
+06/14 14:38:11 setting version to 4.3.1
+06/14 14:38:11 getting haxe binary to install in /home/snsvrno/Source/haxe
+06/14 14:38:11 haxe 4.3.1 is already installed at /home/snsvrno/Source/haxe
+06/14 14:38:12 installing neko
+06/14 14:38:13 setting version to 2.3.0
+06/14 14:38:13 getting neko binary to install in /home/snsvrno/Source/neko
+06/14 14:38:13 neko 2.3.0 is already installed at /home/snsvrno/Source/neko
+06/25 14:52:18 installing go
+06/25 14:52:18 cant find file /home/snsvrno/.config/get/go.g
+06/26 14:45:05 installing haxe
+06/26 14:45:07 setting version to 4.3.1
+06/26 14:45:07 getting haxe binary to install in /home/snsvrno/Source/haxe
+06/26 14:45:07 haxe 4.3.1 is already installed at /home/snsvrno/Source/haxe
+06/26 14:45:08 installing neko
+06/26 14:45:09 setting version to 2.3.0
+06/26 14:45:09 getting neko binary to install in /home/snsvrno/Source/neko
+06/26 14:45:09 neko 2.3.0 is already installed at /home/snsvrno/Source/neko

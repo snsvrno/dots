@@ -135,11 +135,11 @@ return {
 				highlight = { colors.green, colorGroups.git[2] },
 				condition = condition.check_git_workspace,
 			})
-			add(side, "GitDiffAddRight", {
+			--[[add(side, "GitDiffAddRight", {
 				provider = function() return " " end,
 				highlight = { colors.green, colorGroups.git[2] },
 				condition = condition.check_git_workspace,
-			})
+			})--]]
 
 			add(side, "GitDiffRemoveIcon", {
 				provider = function() return " " end,
@@ -150,12 +150,12 @@ return {
 				provider = "DiffRemove",
 				highlight = { colors.pink, colorGroups.git[2] },
 				condition = condition.check_git_workspace,
-			})
+			})--[[
 			add(side, "GitDiffRemoveRight", {
 				provider = function() return " " end,
 				highlight = { colors.pink, colorGroups.git[2] },
 				condition = condition.check_git_workspace,
-			})
+			})--]]
 
 			add(side, "GitDiffModifiedLeft", {
 				provider = function() return " " end,

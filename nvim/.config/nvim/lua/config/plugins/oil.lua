@@ -6,8 +6,20 @@ return {
 	},
 
 	config = function()
-		require('oil').setup()
-
-		vim.keymap.set('n', '~', require('oil').open, { desc = "oil" })
+		require('oil').setup({
+			view_options = {
+				show_hidden = true,
+			},
+		})
 	end,
+
+	keys = {
+		{
+			"~",
+			function()
+				require('oil').open()
+			end,
+			desc = "Oil"
+		}
+	},
 }

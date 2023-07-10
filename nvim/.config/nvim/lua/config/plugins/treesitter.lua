@@ -12,7 +12,7 @@ return {
 		})
 
 		require('nvim-treesitter.configs').setup({
-			ensure_installed = { "haxe", "toml", "markdown", "git_rebase" },
+			ensure_installed = { "haxe", "toml", "markdown", "git_rebase", "lua" },
 			highlight = {
 				enable = true,
 				additional_vim_regex_highlighting = false,

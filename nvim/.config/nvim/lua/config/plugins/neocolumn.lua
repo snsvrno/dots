@@ -1,10 +1,10 @@
+local function config()
+	local col = require('NeoColumn')
+	col.setup()
+	col.toggle_neocolumn()
+end
+
 return {
 	"ecthelionvi/NeoColumn.nvim",
-
-	config = function()
-		local col = require('NeoColumn')
-
-		col.setup()
-		col.toggle_neocolumn()
-	end
+	config = config,
 }

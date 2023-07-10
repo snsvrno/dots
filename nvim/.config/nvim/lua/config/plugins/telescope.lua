@@ -59,24 +59,6 @@ return {
 	},
 
 	{
-		'nvim-telescope/telescope-file-browser.nvim',
-
-		dependencies = {
-			'nvim-tree/nvim-web-devicons',
-		},
-
-		config = function()
-
-			local telescope = require('telescope')
-			telescope.load_extension('file_browser')
-
-			local m = require('config.mappings')
-			m.n(prefix .. 'n', telescope.extensions.file_browser.file_browser, "File Browser")
-
-		end
-	},
-
-	{
 		'cljoly/telescope-repo.nvim',
 
 		dependencies = {

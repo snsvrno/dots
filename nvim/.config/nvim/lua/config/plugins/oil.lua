@@ -1,25 +1,22 @@
+local function config()
+	require('oil').setup({
+		view_options = {
+			show_hidden = true,
+		},
+	})
+end
+
+local function open_oil()
+	require('oil').open()
+end
+
 return {
 	'stevearc/oil.nvim',
-
+	config = config,
 	dependencies = {
 		'nvim-tree/nvim-web-devicons'
 	},
-
-	config = function()
-		require('oil').setup({
-			view_options = {
-				show_hidden = true,
-			},
-		})
-	end,
-
 	keys = {
-		{
-			"~",
-			function()
-				require('oil').open()
-			end,
-			desc = "Oil"
-		}
+		{ "~", open_oil, desc = "Oil" }
 	},
 }

@@ -1,27 +1,18 @@
-local prefix = "g"
-
 local function config()
-	local neogit = require('neogit')
-	neogit.setup({ })
-
-	local m = require('config.mappings')
-	m.prefix(prefix, "Neogit")
+	require('neogit').setup()
 end
 
-local function open_git()
+local function neogit_open()
 	require('neogit').open()
 end
 
 return {
 	'NeogitOrg/neogit',
-
+	config = config,
 	dependencies = {
 		'nvim-lua/plenary.nvim'
 	},
-
-	config = config,
-
 	keys = {
-		{ "<leader>gg", open_git, desc = "Default" },
+		{ "<leader>g", neogit_open, desc = "Default" },
 	},
 }

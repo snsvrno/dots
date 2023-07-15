@@ -5,11 +5,11 @@ return {
 		local condition = require('galaxyline.condition')
 		local gls = gl.section
 
-		local colors = require('dracula').colors()
+		local colors = require('theme').getColors()
 
 		local colorGroups = {
-			git = { colors.white, colors.gutter_fg },
-			file = { colors.fg, colors.visual },
+			git = { colors.white, colors.bright_black },
+			file = { colors.white, colors.black },
 		}
 
 		local bytemarkers = { {0x7FF,192}, {0xFFFF,224}, {0x1FFFFF,240} }
@@ -32,13 +32,13 @@ return {
 
 		local function colormode(mode, shouldFlip)
 			local mode = vim.fn.mode()
-			local color = { colors.black, colors.gutter_fg }
+			local color = { colors.yellow, colors.black }
 
-			if mode:sub(1,1) == "i" then color = { colors.black, colors.orange, "bold" }
-			elseif mode:sub(1,1) == "n" then color = { colors.black, colors.purple, "bold" }
+			if mode:sub(1,1) == "i" then color = { colors.black, colors.red, "bold" }
+			elseif mode:sub(1,1) == "n" then color = { colors.black, colors.magenta, "bold" }
 			elseif mode:sub(1,1) == "v" then color = { colors.black, colors.cyan, "bold" }
 			elseif mode:sub(1,1) == "V" then color = { colors.cyan, colors.black, "bold" }
-			elseif mode:sub(1,1) == "c" then color = { colors.black, colors.pink, "bold" }
+			elseif mode:sub(1,1) == "c" then color = { colors.black, colors.bright_red, "bold" }
 			end
 
 			if shouldFlip == true then
@@ -143,17 +143,17 @@ return {
 
 			add(side, "GitDiffRemoveIcon", {
 				provider = function() return " " end,
-				highlight = { colors.pink, colorGroups.git[2] },
+				highlight = { colors.bright_red, colorGroups.git[2] },
 				condition = condition.check_git_workspace,
 			})
 			add(side, "GitDiffRemove", {
 				provider = "DiffRemove",
-				highlight = { colors.pink, colorGroups.git[2] },
+				highlight = { colors.bright_red, colorGroups.git[2] },
 				condition = condition.check_git_workspace,
 			})--[[
 			add(side, "GitDiffRemoveRight", {
 				provider = function() return " " end,
-				highlight = { colors.pink, colorGroups.git[2] },
+				highlight = { colors.bright_red, colorGroups.git[2] },
 				condition = condition.check_git_workspace,
 			})--]]
 
@@ -187,7 +187,7 @@ return {
 		makeGit("right")
 		add("right", "LineInfo", {
 			provider = "LineColumn",
-			highlight = { colors.fg, colors.visual },
+			highlight = { colors.white, colors.black },
 		})
 
 

@@ -35,7 +35,7 @@ local function config()
 			end, { 'i' }),
 
 			['<CR>'] = cmp.mapping.confirm(),
-			['<ESC>'] =  cmp.mapping.close(),
+			['<DEL>'] =  cmp.mapping.close(),
 		},
 
 	}

@@ -2,6 +2,7 @@
 set fish_function_path ~/.config/fish/user_functions $fish_function_path
 
 source $HOME/Dev/dev.fish
+source $HOME/.config/fish/local.fish
 
 # NNN
 export NNN_FIFO=/tmp/nnn.fifo
@@ -41,3 +42,10 @@ alias g-pp "git pull"
 set hydro_color_pwd green
 set hydro_color_git yellow
 set hydro_color_error magenta
+
+# asking kitty to refresh
+# set -l pids $(ps ux | grep kitty | awk '{print $2}')
+# for id in $pids
+# 	command kill -SIGUSR1 $id
+# end
+command kill -SIGUSR1 $KITTY_PID

@@ -12,16 +12,17 @@ fi
 
 vpn_status=$(expressvpn status | grep -E "Connected to" | cut -d"-" -f2 | cut -d' ' -f2,3,4,5,6)
 
-color="#50fa7b"
+color="$COLOR_blue"
 
 if [ "$vpn_status " = " " ]; then
 	vpn_status="Not Connected"
-	color="#bd93f9"
+	color="$COLOR_red"
 else
 	wifi_status="$wifi_status ($vpn_status)"
+	color="$COLOR_green"
 fi
 
-echo " $wifi_status"
+echo "  $wifi_status"
 echo "$wifi_status"
 echo "$color"
 exit 0

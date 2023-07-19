@@ -3,6 +3,9 @@ local function config()
 		view_options = {
 			show_hidden = true,
 		},
+		keymaps = {
+			["="] = "actions.parent",
+		}
 	})
 end
 
@@ -17,6 +20,6 @@ return {
 		'nvim-tree/nvim-web-devicons'
 	},
 	keys = {
-		{ "~", open_oil, desc = "Oil" }
+		{ "`", open_oil, desc = "Oil" },
 	},
 }

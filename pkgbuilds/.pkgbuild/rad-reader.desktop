@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=Rad Reader
+Comment=Feed Reader
+Exec=rad-reader
+Icon=
+Terminal=false
+Type=Application
+PrefersNonDefaultGPU=true

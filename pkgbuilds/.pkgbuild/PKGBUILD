@@ -1,0 +1,40 @@
+
+pkgname=radreader
+_pkgver=2023-07-10
+pkgver=${_pkgver//-/.}
+pkgrel=1
+pkgdesc="RSS Reader"
+arch=('x86_64')
+url="https://cblgh.itch.io/rad-reader"
+license=('???')
+depends=()
+provides=(radreader)
+conflicts=(radreader)
+source=(
+	"local://rad-reader-linux-release-amd64_${_pkgver}.tar.gz"
+	"local://rad-reader.desktop"
+)
+sha256sums=(
+	"36d6147a342448fe38ca1124ca1c3687f5fcb1a125202214039707f332b67e50"
+	"SKIP"
+)
+
+package() {
+	tar xf rad-reader-linux-release-amd64_${_pkgver}.tar.gz -C $pkgdir
+
+	chmod +x $pkgdir/rad-reader-release
+
+	mkdir -p $pkgdir/usr/bin
+	mv $pkgdir/rad-reader-release \
+		$pkgdir/usr/bin/rad-reader
+
+	mkdir -p $pkgdir/usr/share/licenses/$pkgname
+	mv $pkgdir/LICENSE.txt \
+		$pkgdir/usr/share/licenses/$pkgname/
+
+	mkdir -p $pkgdir/usr/share/applications
+	cp rad-reader.desktop \
+		$pkgdir/usr/share/applications/rad-reader.desktop
+
+}
+

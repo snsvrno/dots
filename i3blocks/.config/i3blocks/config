@@ -5,3 +5,6 @@ interval=1
 [time]
 command=./date.sh
 interval=5
+
+[space]
+full_text= 

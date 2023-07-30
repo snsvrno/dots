@@ -24,6 +24,7 @@ return {
 					prompt_prefix = " ",
 					sorting_strategy = "ascending",
 					dynamic_preview_title = true,
+					initial_mode = "normal",
 					layout_config = {
 						horizontal = {
 							prompt_position = "top",

@@ -1,3 +1,7 @@
+[timew]
+command=./timew.sh
+interval=5
+
 [wifi]
 command=./expressvpn.sh
 interval=1

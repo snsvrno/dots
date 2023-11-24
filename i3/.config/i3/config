@@ -125,6 +125,7 @@ bindsym $mod+e layout toggle split
 
 # toggle tiling / floating
 bindsym $mod+Shift+space floating toggle
+bindsym $mod+Shift+s sticky toggle
 
 # change focus between tiling / floating windows
 bindsym $mod+space focus mode_toggle
@@ -232,3 +233,6 @@ default_border pixel 0
 for_window [instance="Godot_Engine"] floating enable
 # hashlink
 for_window [class="hl" instance="hl"] floating enable
+# peek
+for_window [class="peek" instance="peek"] floating enable
+for_window [class="peek" instance="peek"] sticky enable
